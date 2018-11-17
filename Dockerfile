@@ -7,4 +7,8 @@ RUN conda clean -tipsy && \
 
 RUN conda install --yes --quiet openblas \
     pandas scikit-learn && \
-    conda clean -tipsy
+    conda clean -tipsy && \
+    pip install -U --no-cache-dir alpha_vantage
+
+#Additional libraries
+#sklearn-deap, teapot, daskml, dash
