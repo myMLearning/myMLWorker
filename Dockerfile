@@ -2,6 +2,9 @@ FROM continuumio/miniconda3
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+ENV CONDA_DIR=/opt/conda \
+    PATH=$CONDA_DIR/bin:$PATH
+
 RUN conda clean -tipsy && \
     apt-get update --quiet --yes && apt-get upgrade --quiet --yes
 
