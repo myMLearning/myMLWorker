@@ -16,3 +16,8 @@ RUN conda install --yes --quiet openblas \
 
 #Additional libraries
 #sklearn-deap, teapot, daskml, dash
+
+ADD entrypoint.sh /
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
