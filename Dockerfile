@@ -17,6 +17,8 @@ RUN conda install --yes --quiet openblas \
 #Additional libraries
 #sklearn-deap, teapot, daskml, dash
 
+#Entrypoint adds ssh key files to bitbucket and
+#run any argument
 ADD entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 
