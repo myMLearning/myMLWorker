@@ -9,8 +9,8 @@ FROM continuumio/miniconda3
 #    apt-get update --quiet --yes && apt-get upgrade --quiet --yes
 
 RUN conda install --yes --quiet openblas \
-    pandas scikit-learn
-#    pandas scikit-learn && \
+    pandas scikit-learn && \
+    conda clean -t
 #    conda clean -tipsy && \
 #    pip install --upgrade pip & \
 #    pip install -U --no-cache-dir alpha_vantage
