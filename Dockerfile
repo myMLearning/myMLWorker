@@ -10,7 +10,7 @@ FROM continuumio/miniconda3
 
 RUN conda install --yes --quiet openblas \
     pandas scikit-learn && \
-    conda clean -t
+    conda clean -ty
 #    conda clean -tipsy && \
 #    pip install --upgrade pip & \
 #    pip install -U --no-cache-dir alpha_vantage
