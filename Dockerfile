@@ -8,7 +8,9 @@ FROM continuumio/miniconda3
 #RUN conda clean -tipsy && \
 #    apt-get update --quiet --yes && apt-get upgrade --quiet --yes
 
-RUN conda install --yes --quiet openblas \
+RUN pip install --upgrade pip && \
+    pip install -U --no-cache-dir alpha_vantage && \
+    conda install --yes --quiet openblas \
     pandas scikit-learn && \
     conda clean -tsy
 #    conda clean -tipsy && \
